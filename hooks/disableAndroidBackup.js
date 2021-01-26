@@ -71,10 +71,12 @@ var disableAllowBackup = (function () {
 })();
 
 module.exports = function (ctx) {
-    var Q = ctx.requireCordovaModule("q");
-    fs = ctx.requireCordovaModule("fs");
-    path = ctx.requireCordovaModule("path");
-    elementtree = ctx.requireCordovaModule("elementtree");
+    //var Q = ctx.requireCordovaModule("q");
+    var Q = require('q');
+    //fs = ctx.requireCordovaModule("fs");
+    fs = require('fs');
+    path = require('path');
+    elementtree = require('elementtree');
 
     deferral = Q.defer();
 
